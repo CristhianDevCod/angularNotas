@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { Note, NOTES } from '../../../../notes';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { NOTES } from '../../../../notes';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-note-detail',
