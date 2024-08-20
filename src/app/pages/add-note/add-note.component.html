@@ -1,0 +1,22 @@
+<div class="container text-center py-4">
+	<h2>Nueva Nota</h2>
+	<form class="d-flex flex-column gap-3" [formGroup]="addNoteForm" (ngSubmit)="addNote()">
+		<div class="input-group">
+			<label for="note-title" class="input-group-text">Title:</label>
+			<input class="form-control" type="text" id="note-title" formControlName="title"/>
+		</div>
+		<div class="input-group">
+			<label class="input-group-text" for="note-text">Text:</label>
+			<input class="form-control" type="text" id="note-text" formControlName="text"/>
+		</div>
+		<div>
+			<button 
+				class="btn btn-primary" 
+				type="submit" 
+				[disabled]="!addNoteForm.valid"
+			>
+				Añadir Nota
+			</button>
+		</div>
+	</form>
+</div>

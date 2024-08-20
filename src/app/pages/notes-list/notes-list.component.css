@@ -1,0 +1,37 @@
+/* Contenedor principal */
+.card {
+	position: relative;
+}
+.card:hover {
+	scale: 1.05;
+}
+
+/* Cuerpo del contenedor principal */
+.card-body{
+	filter: blur(0);
+}
+.card-body, .card {
+	transition: all .5s ease-in-out;
+}
+
+.card:hover .card-body {
+	scale: 1.05;
+	filter: blur(3px);
+}
+
+
+/* Elemento de detalles */
+.verDetalles p{
+	font-size: 1.5rem;
+	font-weight: bold;
+	display: none;
+	color: blue;
+	transition: all .8s ease;
+}
+
+.card:hover .verDetalles p{
+	position: absolute;
+	display: block;
+	top: 45%;
+	left: 35%;
+}

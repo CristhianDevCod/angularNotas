@@ -1,0 +1,26 @@
+<div class="p-0 m-0 m-3 d-flex flex-wrap justify-content-center aling-items-center gap-3">
+	@for (nota of notas; track $index) {
+		<div href="#" class="card text-decoration-none p-3 d-inline-block" [routerLink]="['/note', nota.id]" style="max-width: 350px; cursor: pointer;">
+			<div class="card-body">
+				<div class="card-title fs-3 fw-bold" style="color: #5936d7f3;">
+					<!-- Valida la extension del texto -->
+					@if( (nota.title).length >= 16 ){
+						{{ (nota.title).charAt(0).toLocaleUpperCase() + (nota.title).substring(1, 13) + '...' }}
+					} @else {
+						{{ (nota.title).charAt(0).toLocaleUpperCase() + (nota.title).substring(1) }}
+					}
+				</div>
+				<p class="card-text">
+					@if( (nota.text).length >= 120 ){
+						{{ (nota.text).charAt(0).toLocaleUpperCase() + (nota.text).substring(1,117) + '...' }}
+					} @else {
+						{{ (nota.text).charAt(0).toLocaleUpperCase() + (nota.text).substring(1) }}
+					}
+				</p>
+			</div>
+			<div class="verDetalles">
+				<p>Ver nota</p>
+			</div>
+		</div>
+	}
+</div>

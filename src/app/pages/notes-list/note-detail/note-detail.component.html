@@ -1,0 +1,26 @@
+<div class="container">
+	@if (note){
+		<div class="card m-5 bg-light p-3 col">
+			<div class="card-body">
+				<p class="card-title text-primary fs-3">
+					{{note.title}}
+				</p>
+				<p>Id: {{note.id}}</p>
+				<p class="card-text">
+					{{note.text}}
+				</p>
+			</div>
+			<div class="d-flex justify-content-center gap-5">
+				<button class="btn btn-outline-danger p-3 fw-bold" data-bs-toggle="modal" data-bs-target="#confirmarEliminar" type="button">
+					Eliminar
+				</button>
+				<button class="btn btn-outline-primary p-3 fw-bold">
+					Editar
+				</button>
+			</div>
+		</div>
+	} 
+	<nav>
+		<button routerLink="">Volver al listado</button>
+	</nav>
+</div>
