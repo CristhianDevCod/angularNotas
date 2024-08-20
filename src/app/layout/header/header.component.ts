@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   template: `
-    <h1 class="text-center bg-warning py-3 fw-bold m-0">{{title}}</h1>
+    <h1 class="text-center bg-info py-3 fw-bold m-0">{{title}}</h1>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container d-flex justify-content-center">

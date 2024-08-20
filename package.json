@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "git:add": "git add .",
+    "git:commit": "node -e \"const num = Math.floor(Math.random() * 1000000); require('child_process').execSync('git commit -m \\\"Auto commit #' + num + '\\\"');\"",
+    "git:push": "git push origin master",
+    "git:all": "npm-run-all git:add git:commit git:push"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +37,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "npm-run-all": "^4.1.5",
     "typescript": "~5.5.2"
   }
 }
